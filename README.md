@@ -17,8 +17,10 @@ python3 -m venv myvenv
 ```bash
 source myvenv/bin/activate
 ```
-4. pip install -r requirements.txt
-
+4. install requirements
+```bash
+pip install -r requirements.txt
+```
 5. install redis 
 ```bash
 brew install redis
@@ -26,16 +28,21 @@ brew install redis
 
 ## running
 
-1. python3 manage.py migrate
+1.  migrate db
+```bash
+python3 manage.py migrate
+```
 
-
-in new terminal
-
+2. in new terminal
+```bash
 redis-server
+```
+3. in new terminal activate venv   and use 
+```bash
+celery -A proj worker -l info
+```
 
-in new terminal
-
-activate venv   and use celery -A proj worker -l info
-
-
-2. python3 manage.py runserver
+4. start server
+```bash
+python3 manage.py runserver
+```
