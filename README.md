@@ -9,14 +9,20 @@ simple api for resizing image
 
 1. git clone https://github.com/nakiselev/image-resize-api.git
 
-2. create virtual environment python3 -m venv myvenv 
-
-3. activate venw  source myvenv/bin/activate
-
+2. create virtual environment 
+```bash
+python3 -m venv myvenv 
+```
+3. activate venw  
+```bash
+source myvenv/bin/activate
+```
 4. pip install -r requirements.txt
 
-5. install redis brew install redis
-
+5. install redis 
+```bash
+brew install redis
+```
 
 ## running
 
@@ -29,7 +35,7 @@ redis-server
 
 in new terminal
 
-activate venv   celery worker -A simple_api_pic -l debug
+activate venv   and use celery -A proj worker -l info
 
 
 2. python3 manage.py runserver
