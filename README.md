@@ -72,5 +72,37 @@ pkill -9 -f 'celery worker'
 python3 manage.py test
 ```
 
+api link
+
+http://127.0.0.1:8000/api/pic/
+
+POST:
+params {
+		image: file - image(jpg,png),
+		width: number in range 1-9999,
+		height: number in range 1-9999
+}
+
+response {
+		status: HTTP status,
+		'is_correct_arguments': True/False,
+		task: task_id/none
+}
+
+
+GET:
+	params {
+			uid: task_id 
+}
+
+response {
+		status: HTTP status,
+		resize_pic_url: url/none
+}
+
+
+
+
+
 
 
